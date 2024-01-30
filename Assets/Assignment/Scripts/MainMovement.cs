@@ -10,7 +10,7 @@ public class MainMovement : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -19,10 +19,16 @@ public class MainMovement : MonoBehaviour
         direction.x = Input.GetAxis("Horizontal");
         direction.y = Input.GetAxis("Vertical");
     }
-    
+
     void FixedUpdate()
     {
         //Adding movement to the player
         rigidbody.AddForce(direction * speed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        rigidbody.position = new Vector2(0, 0);
+    }
 }
+
