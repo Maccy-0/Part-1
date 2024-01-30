@@ -28,7 +28,7 @@ public class MainMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        rigidbody.position = new Vector2(0, 0);
+        rigidbody.position = new Vector2(-9, -7);
     }
 }
 
